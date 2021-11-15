@@ -70,9 +70,6 @@ class PegawaiController extends Controller
 	// alihkan halaman ke halaman pegawai
 	return redirect('/pegawai');
     }
-    public function coba{
-
-    }
 }
 
 
