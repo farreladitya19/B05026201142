@@ -36,7 +36,7 @@
 			<td>{{ $p->Status }}</td>
 			<td>
 				<a href="/tugas/edit/{{ $p->ID }}" class="btn btn-warning">Edit</a>
-				|
+
 				<a href="/tugas/hapus/{{ $p->ID}}" class="btn btn-danger">Hapus</a>
 			</td>
 		</tr>
