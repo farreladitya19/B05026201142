@@ -22,7 +22,9 @@ public function tambah()
 {
 
 	// memanggil view tambah
-	return view('tugas.tambah');
+	$pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+
+	return view('tugas.tambah',['pegawai' => $pegawai]);
 
 }
     // method untuk insert data ke table tugas
@@ -44,8 +46,11 @@ public function edit($ID)
 {
 	// mengambil data tugas berdasarkan id yang dipilih
 	$tugas = DB::table('tugas')->where('ID',$ID)->get();
+
+    $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+
 	// passing data tugas yang didapat ke view edit.blade.php
-	return view('tugas.edit',['tugas' => $tugas]);
+	return view('tugas.edit',['tugas' => $tugas, 'pegawai' => $pegawai]);
 
 }
 public function update(Request $request)

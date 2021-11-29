@@ -1,46 +1,55 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends("layout.ceria")
+@section("title", "Input Tugas")
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-
-	<title>Input Data</title>
-</head>
-<body>
-    <div class="container">
+@section("isikonten")
         <h1>Tabel Tugas</h1>
 
         <a href="/tugas " class="btn btn-secondary"> < Kembali</a>
 
+	<br/>
 
-	<br/>
-	<br/>
 
 	@foreach($tugas as $p)
 	<form action="/tugas/update" method="post">
 		{{ csrf_field() }}
         <input type="hidden" name="ID" value="{{ $p->ID }}"> <br/>
         <div class="mb-3">
-        <label class="form-label">IDPegawai</label>
-		 <input type="text" class="form-control" name="IDPegawai" required="required" value="{{ $p->IDPegawai }}">
-        </div>
+            <label class="form-label">Pegawai</label>
+            <select class="form-select" name="IDPegawai" aria-label="Default select example">
+                @foreach($pegawai as $peg)
+                <option value="{{ $peg->pegawai_id }}" @if ($peg->pegawai_id === $p->IDPegawai) selected="selected" @endif> {{ $peg->pegawai_nama }}</option>
+                @endforeach
+            </select>
+            </div>
         <div class="mb-3">
-        <label class="form-label">Tanggal</label>
-        <input type="datetime" class="form-control" name="Tanggal" required="required" value="{{ $p->Tanggal}}">
-        </div>
+            <label for="datetimepicker1" class="form-label">Tanggal</label>
+            <div class="form-group">
+                <div class="input-group date" id="datetimepicker">
+                  <input type="text" class="form-control" name="Tanggal" value="{{ $p->Tanggal}}" required/>
+                  <div class="input-group-addon input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                  </div>
+                </div>
+              </div>
         <div class="mb-3">
-        <label class="form-label">NamaTugas</label>
+        <label class="form-label">Nama Tugas</label>
         <input type="text" class="form-control" name="NamaTugas" required="required" value="{{ $p->NamaTugas }}">
         </div>
         <div class="mb-3">
-        <label class="form-label">Status</label>
-        <input type="text" class="form-control" maxlength="1" name="Status" required="required" value="{{ $p->Status}}">
-        </div>
+            <label class="form-label">Status</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="hadir" name="Status" value="S" value="{{ $p->Status}}" required>
+                <label class="form-check-label" for="hadir">
+                  SUDAH
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input"  type="radio" id="tidak" name="Status" value="B" checked="checked" required>
+                <label class="form-check-label" for="tidak">
+                  BELUM
+                </label>
+              </div>
+            </div>
 
 		<input type="submit" value="Simpan Data" class="btn btn-success">
 	</form>
@@ -48,6 +57,4 @@
 	@endforeach
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-</html>
+@endsection
