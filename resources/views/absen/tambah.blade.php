@@ -1,39 +1,51 @@
 @extends("layout.ceria")
-@section("title", "ABSEN PEGAWAI")
+@section("title", "Input Tugas")
 
 @section("isikonten")
 
-	<h2><a href="https://www.malasngoding.com"></a></h2>
-	<h3>Absen Pegawai</h3>
+<h1>Input Absen</h1>
 
-	<a href="/absen"> Kembali</a>
+<a href="/absen " class="btn btn-secondary"> < Kembali</a>
 
-	<br/>
-	<br/>
+<br/>
+<br/>
 
 	<form action="/absen/store" method="post">
 		{{ csrf_field() }}
-		Pegawai <select id="IDPegawai" name="IDPegawai" required="required">
-            @foreach($pegawai as $p)
-            <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }}</option>
-        </select>
-        @endforeach
-        <br/>
-        <label for="dtpickerdemo" class="control-label">Tanggal</label>
-
-                <div class='col-sm-4 input-group date' id='dtpickerdemo'>
-                    <input type='text' class="form-control" name="tanggal" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+		<div class="mb-3">
+            <label class="form-label">Pegawai</label>
+            <select class="form-select" name="IDPegawai" aria-label="Default select example">
+                @foreach($pegawai as $p)
+                <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }}</option>
+                @endforeach
+            </select>
+            </div>
+       <div class="mb-3">
+            <label for="datetimepicker1" class="form-label">Tanggal</label>
+            <div class="form-group">
+                <div class="input-group date" id="datetimepicker">
+                  <input type="text" class="form-control" name="Tanggal" required/>
+                  <div class="input-group-addon input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                  </div>
                 </div>
-		Status
-        <input type="radio" id="hadir" name="status" value="H">
-        <label for="hadir">HADIR</label><br>
-        <input type="radio" id="tidak" name="status" value="T" checked="checked">
-        <label for="tidak">TIDAK HADIR</label><br>
-
-		<input type="submit" value="Simpan Data">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Status</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="hadir" name="Status" value="H" required>
+                    <label class="form-check-label" for="hadir">
+                      SUDAH
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input"  type="radio" id="tidak" name="Status" value="T" checked="checked" required>
+                    <label class="form-check-label" for="tidak">
+                      BELUM
+                    </label>
+                  </div>
+                </div>
+		<input type="submit" value="Simpan Data" class="btn btn-success">
 	</form>
     <script type="text/javascript">
         $(function () {

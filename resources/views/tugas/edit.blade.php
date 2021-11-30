@@ -1,8 +1,8 @@
 @extends("layout.ceria")
-@section("title", "Input Tugas")
+@section("title", "Edit Tugas")
 
 @section("isikonten")
-        <h1>Tabel Tugas</h1>
+        <h1>Edit Tugas</h1>
 
         <a href="/tugas " class="btn btn-secondary"> < Kembali</a>
 
@@ -31,6 +31,7 @@
                   </div>
                 </div>
               </div>
+            </div>
         <div class="mb-3">
         <label class="form-label">Nama Tugas</label>
         <input type="text" class="form-control" name="NamaTugas" required="required" value="{{ $p->NamaTugas }}">

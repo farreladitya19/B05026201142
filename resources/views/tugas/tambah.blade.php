@@ -2,7 +2,7 @@
 @section("title", "Input Tugas")
 
 @section("isikonten")
-    <h1>Tabel Tugas</h1>
+    <h1>Input Tugas</h1>
 
 	<a href="/tugas " class="btn btn-secondary"> < Kembali</a>
 

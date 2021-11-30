@@ -3,14 +3,14 @@
 
 @section("isikonten")
 
-	<h3>Data Pegawai</h3>
+    <h1>Tabel Absen</h1>
 
 	<a href="/absen/tambah" class="btn btn-primary" > + Tambah Absen Pegawai Baru</a>
 
 	<br/>
 	<br/>
 
-	<table class="table table-success table-striped">
+	<table border="1" class="table table-striped table-hover">
 		<tr>
 			<th>ID</th>
 			<th>ID Pegawai</th>
@@ -26,7 +26,7 @@
 			<td>{{ $p->Status }}</td>
 			<td>
 				<a href="/absen/edit/{{ $p->ID }}" class="btn btn-warning" >Edit</a>
-				|
+
 				<a href="/absen/hapus/{{ $p->ID }}" class="btn btn-danger" >Hapus</a>
 			</td>
 		</tr>

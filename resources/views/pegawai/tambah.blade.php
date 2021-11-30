@@ -1,26 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends("layout.ceria")
+@section("title", "Input Tugas")
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Data Pegawai</h3>
+@section("isikonten")
+    <h1>Input Pegawai</h1>
 
-	<a href="/pegawai"> Kembali</a>
+	<a href="/pegawai " class="btn btn-secondary"> < Kembali</a>
 
 	<br/>
 	<br/>
+
 
 	<form action="/pegawai/store" method="post">
 		{{ csrf_field() }}
-		Nama <input type="text" name="nama" required="required"> <br/>
-		Jabatan <input type="text" name="jabatan" required="required"> <br/>
-		Umur <input type="number" name="umur" required="required"> <br/>
-		Alamat <textarea name="alamat" required="required"></textarea> <br/>
-		<input type="submit" value="Simpan Data">
+        <div class="mb-3">
+            <label class="form-label">Nama</label>
+            <input type="text" class="form-control" name="nama" required="required">
+            </div>
+        <div class="mb-3">
+            <label class="form-label">Jabatan</label>
+            <input type="text" class="form-control" name="jabatan" required="required">
+            </div>
+        <div class="mb-3">
+            <label class="form-label">Umur</label>
+            <input type="text" class="form-control" name="umur" required="required">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Alamat</label>
+                <textarea required="required" class="form-control" name="alamat"></textarea>
+                </div>
+		<input type="submit" value="Simpan Data" class="btn btn-success">
 	</form>
-
-</body>
-</html>
+@endsection
