@@ -24,32 +24,29 @@
             <label for="datetimepicker1" class="form-label">Tanggal</label>
             <div class="form-group">
                 <div class="input-group date" id="datetimepicker">
-                  <input type="text" class="form-control" name="Tanggal" required/>
+                  <input type="text" class="form-control" name="tanggal" required/>
                   <div class="input-group-addon input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-calendar"></i></span>
                   </div>
                 </div>
               </div>
+       </div>
               <div class="mb-3">
                 <label class="form-label">Status</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" id="hadir" name="Status" value="H" required>
+                    <input class="form-check-input" type="radio" id="hadir" name="status" value="H" required>
                     <label class="form-check-label" for="hadir">
                       SUDAH
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input"  type="radio" id="tidak" name="Status" value="T" checked="checked" required>
+                    <input class="form-check-input"  type="radio" id="tidak" name="status" value="T" checked="checked" required>
                     <label class="form-check-label" for="tidak">
                       BELUM
                     </label>
                   </div>
                 </div>
+
 		<input type="submit" value="Simpan Data" class="btn btn-success">
 	</form>
-    <script type="text/javascript">
-        $(function () {
-            $('#dtpickerdemo').datetimepicker({format : "YYYY/MM/DD hh:mm"});
-        });
-    </script>
 @endsection

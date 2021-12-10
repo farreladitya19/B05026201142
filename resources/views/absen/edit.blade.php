@@ -41,7 +41,7 @@
                       <div class="form-check">
                         <input class="form-check-input"  type="radio" id="tidak" name="Status" value="T" checked="checked" required>
                         <label class="form-check-label" for="tidak">
-                          TIDAL
+                          TIDAK
                         </label>
                       </div>
                     </div>

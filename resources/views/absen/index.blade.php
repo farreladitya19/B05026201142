@@ -21,9 +21,9 @@
 		@foreach($absen as $p)
 		<tr>
 			<td>{{ $p->ID }}</td>
-			<td>{{ $p->IDPegawai }}</td>
-			<td>{{ $p->Tanggal }}</td>
-			<td>{{ $p->Status }}</td>
+			<td>{{ $p->pegawai_nama }}</td>
+			<td>{{ $p->tanggal }}</td>
+			<td>{{ $p->status }}</td>
 			<td>
 				<a href="/absen/edit/{{ $p->ID }}" class="btn btn-warning" >Edit</a>
 
@@ -32,4 +32,6 @@
 		</tr>
 		@endforeach
 	</table>
+    {{ $absen->links() }}
+
 @endsection

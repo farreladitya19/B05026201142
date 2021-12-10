@@ -5,7 +5,13 @@
 
     <h1>Tabel Pegawai</h1>
 
-	<a href="/pegawai/tambah" class="btn btn-primary"> + Tambah Pegawai Baru</a>
+    <a href="/pegawai/tambah" class="btn btn-primary"> + Tambah Pegawai Baru</a>
+
+
+	<form class="mt-3" action="/pegawai/cari" method="GET">
+		<input type="text" name="cari" placeholder="Cari Pegawai .." value="{{ old('cari') }}">
+		<input type="submit"  class="btn btn-primary" value="GO">
+
 
 	<br/>
 	<br/>
@@ -31,4 +37,7 @@
 		</tr>
 		@endforeach
 	</table>
+    <br/>
+
+	{{ $pegawai->links() }}
 @endsection

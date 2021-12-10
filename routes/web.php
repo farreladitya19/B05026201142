@@ -33,6 +33,7 @@ Route::post('result','ViewController@result');
 Route::get('ets', 'ViewController@showETS');
 
 Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/cari','PegawaiController@cari');
 Route::get('/pegawai/tambah','PegawaiController@tambah');
 Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
