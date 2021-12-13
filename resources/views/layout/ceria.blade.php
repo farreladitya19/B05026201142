@@ -123,7 +123,7 @@
         <script>
           document.write(new Date().getFullYear());
         </script>
-        <br>Hak Cipta oleh 5026201142 - Farrel Istihsan Aditya
+        <br>oleh 5026201142 - Farrel Istihsan Aditya
       </div>
 </body>
 </html>
