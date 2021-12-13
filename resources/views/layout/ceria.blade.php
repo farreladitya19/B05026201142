@@ -37,34 +37,21 @@
             <div class="profile-text text-center mb-4">Farrel Istihsan Aditya <br> 5026201142</div>
             <ul class="list-unstyled components mb-5">
               <li>
-                <a href="http://127.0.0.1:8000/home">Home</a>
+                <a href="/home">Home</a>
               </li>
               <li>
-                <a href="http://127.0.0.1:8000/pegawai">Pegawai</a>
+                <a href="/pegawai">Pegawai</a>
               </li>
               <li>
-                <a href="http://127.0.0.1:8000/absen">Absen</a>
+                <a href="/absen">Absen</a>
               </li>
               <li>
-                <a href="http://127.0.0.1:8000/tugas">Tugas</a>
+                <a href="/tugas">Tugas</a>
               </li>
               <li>
-                <a href="http://127.0.0.1:8000/tugas">Minggu Depan</a>
-              </li>
-              <li>
-                <a href="http://127.0.0.1:8000/tugas">Praktikum</a>
+                <a href="/snack">Snack</a>
               </li>
             </ul>
-
-            <div class="footer" style="font-family:Arial, Helvetica, sans-serif">
-              <p>
-                Copyright &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                Hak Cipta oleh 5026201142 - Farrel Istihsan Aditya
-              </p>
-            </div>
           </div>
         </nav>
 
@@ -99,7 +86,6 @@
           <!--main container end-->
         </div>
       </div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -132,6 +118,13 @@
       });
             });
         </script>
+      <div class="footer text-center py-3" style="font-family:Arial, Helvetica, sans-serif; color : #ffff; background-color: #1D1919">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <br>Hak Cipta oleh 5026201142 - Farrel Istihsan Aditya
+      </div>
 </body>
 </html>
 

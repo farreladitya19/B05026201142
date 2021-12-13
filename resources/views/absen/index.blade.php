@@ -12,18 +12,18 @@
 
 	<table border="1" class="table table-striped table-hover">
 		<tr>
-			<th>ID</th>
-			<th>ID Pegawai</th>
+			<th>No</th>
+			<th>Nama Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
 		</tr>
 		@foreach($absen as $p)
 		<tr>
-			<td>{{ $p->ID }}</td>
+            <td>{{ $loop->iteration }}</td>
 			<td>{{ $p->pegawai_nama }}</td>
-			<td>{{ $p->tanggal }}</td>
-			<td>{{ $p->status }}</td>
+			<td>{{ $p->Tanggal }}</td>
+			<td>{{ $p->Status }}</td>
 			<td>
 				<a href="/absen/edit/{{ $p->ID }}" class="btn btn-warning" >Edit</a>
 
