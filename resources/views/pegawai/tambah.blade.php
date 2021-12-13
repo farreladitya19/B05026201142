@@ -1,16 +1,16 @@
 @extends("layout.ceria")
-@section("title", "Input Snack")
+@section("title", "Input Prgawai")
 
 @section("isikonten")
-    <h1>Input Snack</h1>
+    <h1>Input Pegawai</h1>
 
-	<a href="/snack " class="btn btn-secondary"> < Kembali</a>
+	<a href="/pegawai " class="btn btn-secondary"> < Kembali</a>
 
 	<br/>
 	<br/>
 
 
-	<form action="/snack/store" method="post">
+	<form action="/pegawai/store" method="post">
 		{{ csrf_field() }}
         <div class="mb-3">
             <label class="form-label">Nama</label>
