@@ -23,7 +23,7 @@ class PegawaiController extends Controller
 		// menangkap data pencarian
 		$cari = $request->cari;
 
-    		// mengambil data dari table pegawai sesuai pencarian data
+    	// mengambil data dari table pegawai sesuai pencarian data
 		$pegawai = DB::table('pegawai')
 		->where('pegawai_nama','like',"%".$cari."%")
         ->orWhere('pegawai_alamat','like',"%".$cari."%")
