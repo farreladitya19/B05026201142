@@ -36,13 +36,13 @@
                 <div class="form-check">
                     <input class="form-check-input" type="radio" id="hadir" name="status" value="H" required>
                     <label class="form-check-label" for="hadir">
-                      SUDAH
+                      HADIR
                     </label>
                   </div>
                   <div class="form-check">
                     <input class="form-check-input"  type="radio" id="tidak" name="status" value="T" checked="checked" required>
                     <label class="form-check-label" for="tidak">
-                      BELUM
+                      TIDAK
                     </label>
                   </div>
                 </div>

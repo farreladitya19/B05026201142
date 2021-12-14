@@ -6,6 +6,9 @@
     <h1>Tabel Absen</h1>
 
 	<a href="/absen/tambah" class="btn btn-primary" > + Tambah Absen Pegawai Baru</a>
+    <form class="mt-3" action="/absen/cari" method="GET">
+		<input type="text" name="cari" placeholder="Cari Absen .." value="{{ old('cari') }}">
+		<input type="submit"  class="btn btn-primary" value="GO">
 
 	<br/>
 	<br/>

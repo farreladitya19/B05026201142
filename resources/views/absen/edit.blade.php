@@ -23,7 +23,7 @@
                 <label for="datetimepicker1" class="form-label">Tanggal</label>
                 <div class="form-group">
                     <div class="input-group date" id="datetimepicker">
-                      <input type="text" class="form-control" name="Tanggal" value="{{ $p->Tanggal}}" required/>
+                      <input type="text" class="form-control" name="tanggal" value="{{ $p->Tanggal}}" required/>
                       <div class="input-group-addon input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-calendar"></i></span>
                       </div>
@@ -33,13 +33,13 @@
                 <div class="mb-3">
                     <label class="form-label">Status</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="hadir" name="Status" value="H" value="{{ $p->Status}}" required>
+                        <input class="form-check-input" type="radio" id="hadir" name="status" value="H" value="{{ $p->Status}}" required>
                         <label class="form-check-label" for="hadir">
                           HADIR
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input"  type="radio" id="tidak" name="Status" value="T" checked="checked" required>
+                        <input class="form-check-input"  type="radio" id="tidak" name="status" value="T" checked="checked" required>
                         <label class="form-check-label" for="tidak">
                           TIDAK
                         </label>
