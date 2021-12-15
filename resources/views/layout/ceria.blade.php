@@ -51,6 +51,9 @@
               <li>
                 <a href="/snack">Snack</a>
               </li>
+              <li>
+                <a href="/karyawan1">Karyawan1</a>
+              </li>
             </ul>
           </div>
         </nav>

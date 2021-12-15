@@ -69,3 +69,12 @@ Route::get('/snack/edit/{id}','SnackController@edit');
 Route::post('/snack/update','SnackController@update');
 Route::get('/snack/hapus/{id}','SnackController@hapus');
 Route::get('/snack/detail/{id}','SnackController@view');
+
+Route::get('/karyawan1','Karyawan1Controller@index');
+Route::get('/karyawan1/cari','Karyawan1Controller@cari');
+Route::get('/karyawan1/tambah','Karyawan1Controller@tambah');
+Route::post('/karyawan1/store','Karyawan1Controller@store');
+Route::get('/karyawan1/edit/{NIP}','Karyawan1Controller@edit');
+Route::post('/karyawan1/update','Karyawan1Controller@update');
+Route::get('/karyawan1/hapus/{NIP}','Karyawan1Controller@hapus');
+Route::get('/karyawan1/detail/{NIP}','Karyawan1Controller@view');
