@@ -25,9 +25,9 @@
             </div>
         <div class="mb-3">
             <label class="form-label">Gaji</label>
-            <input type="number" class="form-control" name="Gaji" value="@php
-            echo number_format($s->Gaji,0,",",".")
-        @endphp" required="required" readonly>
+            <label type="number" class="form-control" name="Gaji" required="required" disabled>@php
+                echo number_format($s->Gaji,0,",",".")
+            @endphp</label>
             </div>
 	</form>
 	@endforeach
