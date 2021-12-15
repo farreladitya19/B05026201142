@@ -30,7 +30,9 @@
             <td>{{ $s->NIP }}</td>
 			<td>{{ $s->Nama }}</td>
 			<td>{{ $s->Pangkat}}</td>
-			<td> {{ $s->Gaji}}</td>
+			<td>@php
+                echo number_format($s->Gaji,0,",",".")
+            @endphp</td>
 			<td>
 				<a href="/karyawan1/edit/{{ $s->NIP}} " class="btn btn-warning">Edit</a>
 				<a href="/karyawan1/hapus/{{ $s->NIP}}" class="btn btn-danger">Hapus</a>
@@ -42,9 +44,4 @@
     <br/>
 
 	{{ $karyawan1->links() }}
-    <script>
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-    </script>
 @endsection

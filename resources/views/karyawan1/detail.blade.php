@@ -25,7 +25,9 @@
             </div>
         <div class="mb-3">
             <label class="form-label">Gaji</label>
-            <input type="number" class="form-control" name="Gaji" value="{{ $s->Gaji}}" required="required" readonly>
+            <input type="number" class="form-control" name="Gaji" value="@php
+            echo number_format($s->Gaji,0,",",".")
+        @endphp" required="required" readonly>
             </div>
 	</form>
 	@endforeach

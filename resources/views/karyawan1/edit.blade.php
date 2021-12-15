@@ -25,10 +25,11 @@
             </div>
         <div class="mb-3">
             <label class="form-label">Gaji</label>
-            <input type="number" id="myInput" class="form-control" name="Gaji" value="{{ $s->Gaji}}" required="required">
+            <input type="number" class="form-control" name="Gaji" value="{{ $s->Gaji}}" required="required">
             </div>
 
 		<input type="submit" value="Simpan Data" class="btn btn-success">
 	</form>
 	@endforeach
+
 @endsection

@@ -20,6 +20,9 @@
    {{-- Google Font --}}
    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
 
+   {{-- Gaji Format --}}
+   <script src="~/Scripts/autoNumeric/autoNumeric.min.js" type="text/javascript"></script>
+
    <title>@yield('title')</title>
    <style>
        body{
